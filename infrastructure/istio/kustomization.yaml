@@ -3,4 +3,5 @@ kind: Kustomization
 namespace: istio-operator
 resources:
   - namespace.yaml
+  - namespace2.yaml
   - release.yaml
