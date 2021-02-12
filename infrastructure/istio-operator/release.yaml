@@ -11,6 +11,6 @@ spec:
         kind: HelmRepository
         name: stevehipwell
         namespace: flux-system
-      version: "2.1.0"
+      version: "2.1.2"
   interval: 1h0m0s
  
