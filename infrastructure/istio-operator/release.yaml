@@ -13,4 +13,8 @@ spec:
         namespace: flux-system
       version: "2.1.0"
   interval: 1h0m0s
+  values:
+    serviceAccount:
+      create: flase
+      name: helm-controller
  
