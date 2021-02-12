@@ -4,3 +4,7 @@ namespace: istio-operator
 resources:
   - namespace.yaml
   - release.yaml
+configMapGenerator:
+  - name: istio-values
+    files:
+      - values.yaml=values.yaml
