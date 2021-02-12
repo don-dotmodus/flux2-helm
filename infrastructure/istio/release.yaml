@@ -17,4 +17,7 @@ spec:
     remediation:
       retries: 3
   values:
-    controlPlane.install: true
+    controlPlane:
+      install: true
+      spec:
+        profile: demo
