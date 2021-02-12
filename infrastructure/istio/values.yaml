@@ -1,1 +1,4 @@
-controlPlane.install: true
+controlPlane:
+  install: true
+  spec:
+    profile: demo
