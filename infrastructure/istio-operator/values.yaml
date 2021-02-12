@@ -1,6 +1,0 @@
-serviceAccount:
-  name: istio-operator
-controlPlane:
-  install: true
-  spec:
-    profile: demo
