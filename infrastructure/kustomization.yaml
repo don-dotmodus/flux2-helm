@@ -5,4 +5,5 @@ resources:
   - nginx
   - redis
   - grafana
-  - istio
+  - istio-system  
+  - istio-operator
