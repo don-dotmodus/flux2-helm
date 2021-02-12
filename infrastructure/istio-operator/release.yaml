@@ -16,8 +16,6 @@ spec:
   install:
     remediation:
       retries: 3
-  values:
-    controlPlane:
-      install: true
-      spec:
-        profile: demo
+  valuesFrom:
+    - kind: ConfigMap
+      name: istio-values
