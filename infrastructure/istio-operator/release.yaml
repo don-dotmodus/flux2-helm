@@ -27,5 +27,4 @@ spec:
       # myLabel: myValue
       interval: 1m
     dashboards:
-      enabled: true 	
- 
+      enabled: true
