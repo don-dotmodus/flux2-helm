@@ -6,13 +6,15 @@ spec:
   releaseName: grafana
   chart:
     spec:
-      chart: prometheus-community
+      chart: kube-prometheus-stack
       sourceRef:
         kind: HelmRepository
-        name: prometheus-community/kube-prometheus-stack
+        name: prometheus-community
         namespace: flux-system
       version: "13.7.2"
   interval: 1h0m0s
   install:
     remediation:
       retries: 3
+  values:
+    namespaceOverride: prometheus
