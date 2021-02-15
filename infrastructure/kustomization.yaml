@@ -4,7 +4,7 @@ resources:
   - sources
 #  - nginx
   - redis
-  - grafana
+#  - grafana
   - istio-system  
   - istio-operator
   - prometheus
