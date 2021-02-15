@@ -16,5 +16,5 @@ spec:
   install:
     remediation:
       retries: 3
-  values:
-    namespaceOverride: prometheus
+#  values:
+#    namespaceOverride: prometheus
