@@ -9,7 +9,7 @@ spec:
       chart: prometheus-community
       sourceRef:
         kind: HelmRepository
-        name: prometheus-community
+        name: prometheus-community/kube-prometheus-stack
         namespace: flux-system
       version: "13.7.2"
   interval: 1h0m0s
