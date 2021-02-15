@@ -7,3 +7,4 @@ resources:
   - grafana
   - istio-system  
   - istio-operator
+  - prometheus
