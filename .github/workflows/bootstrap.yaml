@@ -27,6 +27,8 @@ jobs:
           --path=clusters/staging
         env:
           GITHUB_TOKEN: ${{ secrets.GITPROVIDER_BOT_TOKEN }}
+      - name: sleep for 5 mins
+        run: sleep 300
       - name: kubectl get pods
         run: kubectl get pods -A
       - name: uninstall
