@@ -26,7 +26,7 @@ jobs:
           --branch=main \
           --path=clusters/staging
         env:
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITPROVIDER_BOT_TOKEN }}
       - name: kubectl get pods
         run: kubectl get pods -A
       - name: uninstall
