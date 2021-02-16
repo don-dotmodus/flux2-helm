@@ -1,0 +1,35 @@
+name: bootstrap
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Kubernetes
+        uses: engineerd/setup-kind@v0.5.0
+      - name: Install Flux
+        run: curl -s https://toolkit.fluxcd.io/install.sh | sudo bash
+      - name: flux pre flight
+        run: ./usr/local/bin/flux check --pre
+      - name: bootstrap init
+        run: |
+          ./usr/local/bin/flux bootstrap github \
+          --owner=ajmdot \
+          --repository=flux2-helm \
+          --branch=main \
+          --path=clusters/staging
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+      - name: kubectl get pods
+        run: kubectl get pods -A
+          GITHUB_TOKEN: ${{ secrets.GITPROVIDER_BOT_TOKEN }}
+      - name: uninstall
+        run: |
+          ./usr/local/bin/flux uninstall -s --keep-namespace
+          kubectl delete ns flux-system --timeout=10m --wait=true
