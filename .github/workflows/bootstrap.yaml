@@ -28,7 +28,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
       - name: kubectl get pods
         run: kubectl get pods -A
-          GITHUB_TOKEN: ${{ secrets.GITPROVIDER_BOT_TOKEN }}
       - name: uninstall
         run: |
           ./usr/local/bin/flux uninstall -s --keep-namespace
