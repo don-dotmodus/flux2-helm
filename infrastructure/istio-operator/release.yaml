@@ -20,7 +20,7 @@ spec:
     controlPlane:
       install: true
       spec:
-        profile: default
+        profile: demo
     serviceMonitor:
       enabled: true
       additionalLabels: {}
