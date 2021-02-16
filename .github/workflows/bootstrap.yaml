@@ -16,10 +16,11 @@ jobs:
       - name: Install Flux
         run: curl -s https://toolkit.fluxcd.io/install.sh | sudo bash
       - name: flux pre flight
-        run: ./usr/local/bin/flux check --pre
+        run: |
+          flux check --pre
       - name: bootstrap init
         run: |
-          ./usr/local/bin/flux bootstrap github \
+          flux bootstrap github \
           --owner=ajmdot \
           --repository=flux2-helm \
           --branch=main \
@@ -30,5 +31,5 @@ jobs:
         run: kubectl get pods -A
       - name: uninstall
         run: |
-          ./usr/local/bin/flux uninstall -s --keep-namespace
+          flux uninstall -s --keep-namespace
           kubectl delete ns flux-system --timeout=10m --wait=true
