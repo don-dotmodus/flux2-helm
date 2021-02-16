@@ -1,5 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: simpleapp
+namespace: podinfo
 resources:
-  - ../base/simpleapp
+  - ../base/podinfo
+patchesStrategicMerge:
+  - podinfo-values.yaml
