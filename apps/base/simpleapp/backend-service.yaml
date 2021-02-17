@@ -6,5 +6,5 @@ spec:
   ports:
     - port: 8080
       protocol: TCP
-selector:
+  selector:
     app: backend
