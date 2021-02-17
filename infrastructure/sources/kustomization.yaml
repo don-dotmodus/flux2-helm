@@ -6,3 +6,4 @@ resources:
   - podinfo.yaml
   - stevehipwell.yaml  
   - prometheus-community.yaml
+  - gatekeeper.yaml
