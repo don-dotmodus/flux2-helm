@@ -12,13 +12,13 @@ spec:
     name: flux-system
   path: ./apps/dev
   prune: true
-  #validation: client
-  validation: "none"
+  validation: client
+  #validation: "none"
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
-      name: istio-ingressgateway
-      namespace: istio-system
+      name: productpage-v1
+      namespace: default
   timeout: 2m
   #  - apiVersion: helm.toolkit.fluxcd.io/v1beta1
   #    kind: HelmRelease
