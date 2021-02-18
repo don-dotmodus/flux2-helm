@@ -5,5 +5,5 @@ resources:
   #- namespace.yaml
   - grafana.yaml
   - jaeger.yaml
-  - kiali.yaml
+  #- kiali.yaml
   - prometheus.yaml
