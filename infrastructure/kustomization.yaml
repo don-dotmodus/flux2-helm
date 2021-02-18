@@ -7,5 +7,6 @@ resources:
 #  - grafana
   - istio-system  
   - istio-operator
+  - istio-addons
 #  - prometheus
 #  - gatekeeper
