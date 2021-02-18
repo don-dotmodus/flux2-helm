@@ -21,10 +21,10 @@ spec:
       install: true
       spec:
         profile: demo
-    serviceMonitor:
-      enabled: true
-      additionalLabels: {}
-      # myLabel: myValue
-      interval: 1m
-    dashboards:
-      enabled: true
+ #   serviceMonitor:
+ #     enabled: true
+ #     additionalLabels: {}
+ #     # myLabel: myValue
+ #     interval: 1m
+ #   dashboards:
+ #     enabled: true
