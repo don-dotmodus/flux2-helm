@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: istio-system
 resources:      
   - namespace.yaml
-  - grafana.yaml
-  - jaeger.yaml
-  - kiali.yaml
-  - prometheus.yaml
+  #- grafana.yaml
+  #- jaeger.yaml
+  #- kiali.yaml
+  #- prometheus.yaml
