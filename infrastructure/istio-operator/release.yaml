@@ -9,7 +9,7 @@ spec:
       chart: istio-operator
       sourceRef:
         kind: HelmRepository
-        name: stevehipwell
+        name: istio
         namespace: flux-system
       version: "2.1.2"
   interval: 1h0m0s
