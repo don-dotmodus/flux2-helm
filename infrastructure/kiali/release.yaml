@@ -1,22 +1,21 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: kiali-operator
+  name: kiali-server
 spec:
-  releaseName: kiali-operator
+  releaseName: kiali-server
   chart:
     spec:
-      chart: kiali-operator
+      chart: kiali-server
       sourceRef:
         kind: HelmRepository
         name: kiali
         namespace: flux-system
-      version: "1.26.0"
+      version: "1.30.0"
   interval: 1h0m0s
   install:
     remediation:
       retries: 3
   values:
-    cr:
-      create: true
-      namespace: istio-system
+    auth:
+      strategy: "anonymous"
