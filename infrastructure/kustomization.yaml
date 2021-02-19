@@ -8,5 +8,6 @@ resources:
   - istio-system  
   - istio-operator
   - istio-addons
+  - kiali
 #  - prometheus
 #  - gatekeeper
